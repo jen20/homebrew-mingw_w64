@@ -14,9 +14,10 @@ matrix:
       osx_image: beta-xcode6.2
       rvm: system
 
-install: 
+install:
   - brew tap homebrew/versions
+  - brew tap cosmo0920/mingw_w64
 
 script:
-  - brew install i686-w64-mingw32-gcc
-  - brew install x86-64-w64-mingw32-gcc
+  - brew install cosmo0920/mingw_w64/i686-w64-mingw32-gcc
+  - brew install cosmo0920/mingw_w64/x86-64-w64-mingw32-gcc
