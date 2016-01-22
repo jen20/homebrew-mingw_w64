@@ -1,0 +1,22 @@
+language: objective-c
+matrix:
+  include:
+    - env: OSX=10.11
+      os: osx
+      osx_image: xcode7.2
+      rvm: system
+    - env: OSX=10.10
+      os: osx
+      osx_image: xcode7.1
+      rvm: system
+    - env: OSX=10.9
+      os: osx
+      osx_image: beta-xcode6.2
+      rvm: system
+
+install: 
+  - brew tap homebrew/versions
+
+script:
+  - brew install i686-w64-mingw32-gcc
+  - brew install x86-64-w64-mingw32-gcc
