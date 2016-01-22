@@ -1,40 +1,34 @@
 language: objective-c
 matrix:
   include:
-    - env: OSX=10.11
+    - env: OSX=10.11 ARCH=i686
       os: osx
       osx_image: xcode7.2
       rvm: system
-      arch: i686
-    - env: OSX=10.11
+    - env: OSX=10.11 ARCH=x86-64
       os: osx
       osx_image: xcode7.2
       rvm: system
-      arch: x86_64
-    - env: OSX=10.10
+    - env: OSX=10.10 ARCH=i686
       os: osx
       osx_image: xcode7.1
       rvm: system
-      arch: i686
-    - env: OSX=10.10
+    - env: OSX=10.10 ARCH=x86-64
       os: osx
       osx_image: xcode7.1
       rvm: system
-      arch: x86_64
-    - env: OSX=10.9
+    - env: OSX=10.9 ARCH=i686
       os: osx
       osx_image: beta-xcode6.2
       rvm: system
-      arch: i686
-    - env: OSX=10.9
+    - env: OSX=10.9 ARCH=x86-64
       os: osx
       osx_image: beta-xcode6.2
       rvm: system
-      arch: x86_64
 
 install:
   - brew tap homebrew/versions
   - brew tap cosmo0920/mingw_w64
 
 script:
-  - travis_wait brew install cosmo0920/mingw_w64/${arch}-w64-mingw32-gcc
+  - travis_wait brew install cosmo0920/mingw_w64/${ARCH}-w64-mingw32-gcc
