@@ -19,5 +19,5 @@ install:
   - brew tap cosmo0920/mingw_w64
 
 script:
-  - brew install cosmo0920/mingw_w64/i686-w64-mingw32-gcc
-  - brew install cosmo0920/mingw_w64/x86-64-w64-mingw32-gcc
+  - travis_wait brew install cosmo0920/mingw_w64/i686-w64-mingw32-gcc
+  - travis_wait brew install cosmo0920/mingw_w64/x86-64-w64-mingw32-gcc
