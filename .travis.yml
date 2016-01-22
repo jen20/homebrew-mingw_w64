@@ -32,4 +32,4 @@ install:
 
 script:
   - export HOMEBREW_VERBOSE_USING_DOTS=1
-  - brew install cosmo0920/mingw_w64/${ARCH}-w64-mingw32-gcc
+  - travis_wait 60 brew install cosmo0920/mingw_w64/${ARCH}-w64-mingw32-gcc
