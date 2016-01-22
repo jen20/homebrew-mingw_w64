@@ -5,19 +5,36 @@ matrix:
       os: osx
       osx_image: xcode7.2
       rvm: system
+      arch: i686
+    - env: OSX=10.11
+      os: osx
+      osx_image: xcode7.2
+      rvm: system
+      arch: x86_64
     - env: OSX=10.10
       os: osx
       osx_image: xcode7.1
       rvm: system
+      arch: i686
+    - env: OSX=10.10
+      os: osx
+      osx_image: xcode7.1
+      rvm: system
+      arch: x86_64
     - env: OSX=10.9
       os: osx
       osx_image: beta-xcode6.2
       rvm: system
+      arch: i686
+    - env: OSX=10.9
+      os: osx
+      osx_image: beta-xcode6.2
+      rvm: system
+      arch: x86_64
 
 install:
   - brew tap homebrew/versions
   - brew tap cosmo0920/mingw_w64
 
 script:
-  - travis_wait brew install cosmo0920/mingw_w64/i686-w64-mingw32-gcc
-  - travis_wait brew install cosmo0920/mingw_w64/x86-64-w64-mingw32-gcc
+  - travis_wait brew install cosmo0920/mingw_w64/${arch}-w64-mingw32-gcc
