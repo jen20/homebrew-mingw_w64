@@ -1,8 +1,9 @@
 class I686W64Mingw32Binutils < Formula
   desc "Binutils for minimalist GNU for Windows."
   homepage "https://mingw-w64.sourceforge.net/"
-  url "http://ftpmirror.gnu.org/binutils/binutils-2.25.1.tar.bz2"
-  sha256 "b5b14added7d78a8d1ca70b5cb75fef57ce2197264f4f5835326b0df22ac9f22"
+  url "http://ftpmirror.gnu.org/binutils/binutils-2.26.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/binutils/binutils-2.26.tar.gz"
+  sha256 "9615feddaeedc214d1a1ecd77b6697449c952eab69d79ab2125ea050e944bcc1"
 
   keg_only <<-EOS.undent
     This formula is mainly used internally by other formulae.
