@@ -5,8 +5,8 @@ class X8664W64Mingw32Gcc < Formula
   sha256 "2332b2a5a321b57508b9031354a8503af6fdfb868b8c1748d33028d100a8b67e"
 
   resource "mingw-headers" do
-    url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v4.0.4.tar.bz2"
-    sha256 "89356a0aa8cf9f8b9dc8d92bc8dd01a131d4750c3acb30c6350a406316c42199"
+    url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v4.0.6.tar.bz2"
+    sha256 "0c407394b0d8635553f4fbca674cdfe446aac223e90b4010603d863e4bdd015c"
   end
 
   resource "gcc-core" do
@@ -15,13 +15,13 @@ class X8664W64Mingw32Gcc < Formula
   end
 
   resource "mingw-runtime" do
-    url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v4.0.4.tar.bz2"
-    sha256 "89356a0aa8cf9f8b9dc8d92bc8dd01a131d4750c3acb30c6350a406316c42199"
+    url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v4.0.6.tar.bz2"
+    sha256 "0c407394b0d8635553f4fbca674cdfe446aac223e90b4010603d863e4bdd015c"
   end
 
   resource "mingw-winpthread" do
-    url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v4.0.4.tar.bz2"
-    sha256 "89356a0aa8cf9f8b9dc8d92bc8dd01a131d4750c3acb30c6350a406316c42199"
+    url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v4.0.6.tar.bz2"
+    sha256 "0c407394b0d8635553f4fbca674cdfe446aac223e90b4010603d863e4bdd015c"
   end
 
   keg_only <<-EOS.undent
@@ -34,7 +34,7 @@ EOS
   depends_on "libmpc"
   depends_on "cloog018"
   depends_on "isl012"
-  depends_on "cosmo0920/mingw_w64/x86-64-w64-mingw32-binutils" => :build
+  depends_on "jen20/mingw_w64/x86-64-w64-mingw32-binutils" => :build
 
   def install
     target_arch = "x86_64-w64-mingw32"
