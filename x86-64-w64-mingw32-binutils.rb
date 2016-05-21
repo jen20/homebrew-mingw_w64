@@ -5,10 +5,6 @@ class X8664W64Mingw32Binutils < Formula
   mirror "https://ftp.gnu.org/gnu/binutils/binutils-2.26.tar.gz"
   sha256 "9615feddaeedc214d1a1ecd77b6697449c952eab69d79ab2125ea050e944bcc1"
 
-  keg_only <<-EOS.undent
-    This formula is mainly used internally by other formulae.
-EOS
-
   depends_on "gcc49" => :build
 
   def install

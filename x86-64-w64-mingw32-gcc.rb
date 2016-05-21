@@ -24,10 +24,6 @@ class X8664W64Mingw32Gcc < Formula
     sha256 "0c407394b0d8635553f4fbca674cdfe446aac223e90b4010603d863e4bdd015c"
   end
 
-  keg_only <<-EOS.undent
-    This formula is mainly used internally by other formulae.
-EOS
-
   depends_on "gcc49" => :build
   depends_on "gmp"
   depends_on "mpfr"
